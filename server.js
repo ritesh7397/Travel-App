@@ -2,12 +2,17 @@ const express = require('express');  //BASIC
 const mongoose = require('mongoose'); 
 
 
+// IMPORT THE ROUTER FILES
 const hotelDataAddedToDBRouter = require("./routes/dataimport.router");
-
+const categoryDataAddedToDBRouter = require("./routes/categoryimport.router");
 
 
 // IMPORT THE ROUTER FILES
 const hotelRouter = require("./routes/hotel.router");
+const categoryRouter = require("./routes/category.router");
+const singleHotelRouter = require("./routes/singlehotel.router");
+
+
 const connectDB = require('./config/dbconfig');                      
 
 
@@ -37,7 +42,10 @@ app.get("/",(req,res)=>{            //BASIC
 
 // USE THE ROUTERS
 app.use("/api/hoteldata", hotelDataAddedToDBRouter);
+app.use("/api/categorydata", categoryDataAddedToDBRouter);
 app.use("/api/hotels",hotelRouter);
+app.use("/api/category", categoryRouter);
+app.use("/api/hotels", singleHotelRouter);
 
 
 
