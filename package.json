@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-     "dev": "nodemon server"
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "Ritesh Nagrikar",
@@ -17,7 +17,8 @@
     "express": "^4.19.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.5.3",
-    "nodemon": "^3.1.4",
+    "nodemon": "^3.1.7",
     "uuid": "^10.0.0"
   }
 }
+
