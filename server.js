@@ -19,6 +19,12 @@ app.use(cors({
     origin: 'http://localhost:3000' 
   }));
   
+  app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:3000');
+    res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+    next();
+  });
+  
 
 //whenever someone sends data in the JSON format to your server, the server will automatically understand and convert that data into a JavaScript object
 app.use(express.json());
