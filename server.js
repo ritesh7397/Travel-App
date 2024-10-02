@@ -1,8 +1,7 @@
 const express = require('express');  //BASIC
 const mongoose = require('mongoose'); 
 const dotenv = require('dotenv');
-const cors = require('cors');
-
+const cors = require('cors')
 
 
 dotenv.config();
@@ -13,8 +12,7 @@ const connectDB = require('./config/dbconfig');
 const app = express();              //BASIC
 
 
-app.use(cors());
-
+app.use(cors())
 //whenever someone sends data in the JSON format to your server, the server will automatically understand and convert that data into a JavaScript object
 app.use(express.json());
 connectDB();
